@@ -164,8 +164,8 @@
 				'background-color': '#FFE48D',
 				'color': '#9E6007'
 			});
-			$('#toolbar_delete').attr('onclick', "remove('"+id+"')");
-			$('#remove').removeAttr('disabled');
+			$('#btn_delete').attr('onclick', "remove('"+id+"')");
+			$('#toolbar_delete').removeAttr('disabled');
 			$('#toolbar_edit').attr('onclick', "edit('" + id + "')");
 			$('#edit').removeAttr('disabled');
 		}
@@ -203,7 +203,7 @@
             success:function(data){
               var pageno = $('.paginate_active a').data('ci-pagination-page')-1;
               load_data(pageno);
-            //   $('#toolbar_delete').attr('disabled', 'true');
+              $('#toolbar_delete').attr('disabled', 'true');
               $('#modal_hapus').modal('hide');
             }
           });

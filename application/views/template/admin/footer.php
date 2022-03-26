@@ -1,3 +1,19 @@
+		
+		<div id="modal_hapus" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
+			<div class="modal-body">
+				<p style="center">
+					Yakin akan dihapus?
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-default">
+					Batal
+				</button>
+				<button id="btn_delete" type="button" data-dismiss="modal" onclick="return true" class="btn btn-primary">
+					OK
+				</button>
+			</div>
+		</div>
 		<!-- start: FOOTER -->
     	<div class="footer clearfix">
 			<div class="footer-inner">

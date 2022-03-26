@@ -96,7 +96,7 @@
 					<!-- end: RESPONSIVE MENU TOGGLER -->
 					<!-- start: LOGO -->
 					<a class="navbar-brand" href="<?=base_url('dashboard');?>">
-						OlahWeb
+						<img src="<?=base_url("assets/img/logo_ow.png")?>" style="width:30px;" class="circle-img" >OlahWeb
 					</a>
 					<!-- end: LOGO -->
 				</div>
@@ -417,7 +417,7 @@
 						<li class="dropdown current-user">
 							<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
 								<img src="<?=base_url("assets/admin/images/avatar-1-small.jpg")?>" class="circle-img" alt="">
-								<span class="username">Peter Clark</span>
+								<span class="username"><?=$this->session->userdata('username')?></span>
 								<i class="clip-chevron-down"></i>
 							</a>
 							<ul class="dropdown-menu">
