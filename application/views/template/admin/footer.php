@@ -58,6 +58,15 @@
 		showSpinner: true,
 		parent: '.br-mainpanel'
 		});
+
+		function loader_2()
+		{
+		return `<div class="col-md-12 col-xl-12 mg-0" style="padding: 70px 0px 70px 0px;">
+						<div class="tx-center text-center tx-dark ht-150" style="margin-top:20%;">
+						<img style="width:17px;" src="<?= base_url('assets/admin/images/loading.gif'); ?>" alt=""> &nbsp;Processing...
+						</div>
+				</div>`;
+		}
 		</script>
 	</body>
 	<!-- end: BODY -->

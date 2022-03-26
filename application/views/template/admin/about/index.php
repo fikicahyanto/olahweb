@@ -63,6 +63,8 @@
 		</div>
 <script type="text/javascript">
 
+	load_data();
+	
 	$('#btn_close').on('click', function(){
       $('.modal_tambah').modal('hide');
     });
@@ -80,6 +82,8 @@
 			linkedin: $('input[name="linkedin"]').val(),
 			},
 			success: function (data) {
+				var pageno = $('.paginate_active a').data('ci-pagination-page')-1;
+        		load_data(pageno);
 			$('.main_modal').modal('hide');
 			}
 		});
@@ -109,30 +113,45 @@
 			$('.main_modal').modal('show');
 		});
 
-	function load_data() {
+	function load_data(pageno) {
+		
 		$.ajax({
 			type: 'POST',
-			url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>',
+			url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>'+pageno,
 			dataType: 'json',
 				success: function (data) {
+					if(data.pagination > 12){
+						$('#pagination').css('margin-right', '5px');
+					}
+					$('#pagination').html(data.pagination);
 					$('.table_content').html(data.tabel);
+					$('.total_data').html('Total : '+data.total_data+' Data');
 				}
 			});
 		}
 		$(document).ready(function () {
+			$('#pagination').on('click','a',function(e){
+			e.preventDefault();
+       		var pageno = $(this).attr('data-ci-pagination-page');
 			$.ajax({
-				url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>',
+				url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>'+pageno,
 				type: 'get',
 				dataType: 'json',
 				success: function (data) {
 					loaded();
+					if(data.pagination > 14){
+						$('#pagination').css('margin-right', '5px');
+					}
+					$('#pagination').html(data.pagination);
 					$('.table_content').html(data.tabel);
-					// NProgress.done();
+					$('.total_data').html('Total : '+data.total_data+' Data');
+					NProgress.done();
 				},
 				beforeSend:function(){
 				loading('success', '<i class="fa fa-spinner" id="spinner"></i> &nbsp;sedang mengambil data..');
-				// NProgress.start();
+				NProgress.start();
 				}
+			});
 			});
 		});
 
@@ -169,6 +188,7 @@
 					},
 					beforeSend: function () {
 						$('.modal_title').html('Sedang memuat data ..');
+						$('#modal_content').html(loader_2());
 					}
 				});
 			});
@@ -181,9 +201,9 @@
             url:'<?= base_url($this->uri->segment(1)."/about_us/hapus/") ?>'+id,
             dataType:'json',
             success:function(data){
-            //   var pageno = $('.paginate_active a').data('ci-pagination-page')-1;
-            //   load_data(pageno);
-              $('#toolbar_delete').attr('disabled', 'true');
+              var pageno = $('.paginate_active a').data('ci-pagination-page')-1;
+              load_data(pageno);
+            //   $('#toolbar_delete').attr('disabled', 'true');
               $('#modal_hapus').modal('hide');
             }
           });

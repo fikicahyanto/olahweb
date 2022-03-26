@@ -19,7 +19,7 @@ class About_us extends CI_Controller {
         $this->db->from('t_about');
         $query = $this->db->get()->result(); 
         $data['record'] = $query;
-
+        
         $view = $this->load->view('template/admin/about/grid',$data,TRUE);
         echo json_encode([
             'tabel' => $view
