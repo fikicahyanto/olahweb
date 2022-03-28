@@ -1,4 +1,4 @@
-		
+		<!---start: modal notifikasi delet--->
 		<div id="modal_hapus" class="modal fade" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
 			<div class="modal-body">
 				<p style="center">
@@ -14,6 +14,41 @@
 				</button>
 			</div>
 		</div>
+		<!---end: modal notifikasi delet--->
+		<!---start: modal edit password--->
+		<div id="modal_edit_password" class="modal fade modal_edit_password" tabindex="-1" data-backdrop="static" data-keyboard="false" style="display: none;">
+			<div class="modal-body">
+				<div class="row mg-t-10">
+                    <label class="col-sm-4 mg-t-10 form-control-label  tx-13">Password Lama </label>
+                    <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                    	<input name="old_password" type="password" class="form-control tx-13" placeholder="input password lama">
+                    </div>
+                </div><!-- row -->
+                <div class="row mg-t-10">
+                    <label class="col-sm-4 mg-t-10 form-control-label  tx-13">Password Baru </label>
+                    <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                        <input name="new_password" type="password" class="form-control tx-13" placeholder="buat password baru">
+                    </div>
+                </div><!-- row -->
+                <div class="row mg-t-10">
+                    <label class="col-sm-4 mg-t-10 form-control-label  tx-13">Ulangi Password </label>
+                    <div class="col-sm-8 mg-t-10 mg-sm-t-0">
+                        <input name="re_password" type="password" class="form-control tx-13" placeholder="ulangi password baru">
+                        <small id="alert_password"></small>
+                	</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" data-dismiss="modal" class="btn btn-default">
+					Batal
+				</button>
+				<button id="btn_save_password" type="button" data-dismiss="modal" class="btn btn-primary">
+					Simpan
+				</button>
+			</div>
+		</div>
+		<!---end: modal modal edit password--->
+
 		<!-- start: FOOTER -->
     	<div class="footer clearfix">
 			<div class="footer-inner">
@@ -24,15 +59,7 @@
 			</div>
 		</div>
 		<!-- end: FOOTER -->
-		<!-- start: MAIN JAVASCRIPTS -->
-		<!--[if lt IE 9]>
-		<script src="assets/admin/plugins/respond.min.js"></script>
-		<script src="assets/admin/plugins/excanvas.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<![endif]-->
-		<!--[if gte IE 9]><!-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-		<!--<![endif]-->
 		<script src="<?=base_url("assets/admin/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js")?>"></script>
 		<script src="<?=base_url("assets/admin/plugins/bootstrap/js/bootstrap.min.js")?>"></script>
 		<script src="<?=base_url("assets/admin/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js")?>"></script>
@@ -83,6 +110,42 @@
 						</div>
 				</div>`;
 		}
+		function toaster(type, msg) {
+			var x = document.getElementById("snackbar");
+			x.className = "show";
+			$('#snackbar').html(msg);
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+		}
+
+		xhr = null;
+		$("#btn_save_password").on("click", function(){
+		if(xhr && xhr.readyState != 4){
+				xhr.abort();
+			}
+		xhr = $.ajax({
+			type:'POST',
+			url:'<?= base_url("setting/change_password") ?>',
+			dataType:'json',
+			data:{
+			'old_password': $('input[name="old_password"]').val(),
+			'new_password': $('input[name="new_password"]').val(),
+			're_password': $('input[name="re_password"]').val()
+			},
+			success:function(data){
+			if(data.type == 'success'){
+				$('input[name="old_password"]').val('');
+				$('input[name="new_password"]').val('');
+				$('input[name="re_password"]').val('');
+				$('#alert_password').text('');
+				$('.modal_edit_password').modal('hide');
+				toaster(data.type, data.msg);
+			}else{
+				$('#alert_password').css('color', 'red');
+				$('#alert_password').text('noted: '+data.msg);
+			}
+			}
+		});
+		});
 		</script>
 	</body>
 	<!-- end: BODY -->

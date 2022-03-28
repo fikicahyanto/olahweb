@@ -440,8 +440,8 @@
 								</li>
 								<li class="divider"></li>
 								<li>
-									<a href="utility_lock_screen.html"><i class="clip-locked"></i>
-										&nbsp;Lock Screen </a>
+									<a href="" data-target="#modal_edit_password" data-toggle="modal"><i class="clip-locked"></i>
+										&nbsp;Ubah Password </a>
 								</li>
 								<li>
 									<a href="<?=base_url().'login/logout'?>">
