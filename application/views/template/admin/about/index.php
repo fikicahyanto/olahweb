@@ -73,7 +73,7 @@
 				function save(id = "") {
 					$.ajax({
 						type: 'POST',
-						url: '<?= base_url($this->uri->segment(1)."/about_us/save/") ?>' + id,
+						url: '<?= base_url($this->uri->segment(1)."/save/") ?>' + id,
 						dataType: 'json',
 						data: {
 							about_us: $('textarea[name="about_us"]').val(),
@@ -97,7 +97,7 @@
 						}
 						xhr = $.ajax({
 							type: 'POST',
-							url: '<?= base_url($this->uri->segment(1)."/about_us/tambah/")?>',
+							url: '<?= base_url($this->uri->segment(1)."/tambah/")?>',
 							datatype: 'json',
 							success: function (data) {
 								setTimeout(function () {
@@ -118,7 +118,7 @@
 
 					$.ajax({
 						type: 'POST',
-						url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>' + pageno,
+						url: '<?= base_url($this->uri->segment(1)."/datagrid/")?>' + pageno,
 						dataType: 'json',
 						success: function (data) {
 							if (data.pagination > 12) {
@@ -135,7 +135,7 @@
 						e.preventDefault();
 						var pageno = $(this).attr('data-ci-pagination-page');
 						$.ajax({
-							url: '<?= base_url($this->uri->segment(1)."/about_us/datagrid/")?>' + pageno,
+							url: '<?= base_url($this->uri->segment(1)."/datagrid/")?>' + pageno,
 							type: 'get',
 							dataType: 'json',
 							success: function (data) {
@@ -182,7 +182,7 @@
 						}
 						xhr = $.ajax({
 							type: 'POST',
-							url: '<?= base_url($this->uri->segment(1)."/about_us/edit/") ?>' + id,
+							url: '<?= base_url($this->uri->segment(1)."/edit/") ?>' + id,
 							dataType: 'json',
 							success: function (data) {
 								$('#modal_content').html(data);
@@ -202,7 +202,7 @@
 				function remove(id) {
 					$.ajax({
 						type: 'POST',
-						url: '<?= base_url($this->uri->segment(1)."/about_us/hapus/") ?>' + id,
+						url: '<?= base_url($this->uri->segment(1)."/hapus/") ?>' + id,
 						dataType: 'json',
 						success: function (data) {
 							var pageno = $('.paginate_active a').data('ci-pagination-page') - 1;

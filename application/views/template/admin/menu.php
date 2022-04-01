@@ -17,7 +17,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="<?=base_url('admin/about_us')?>"><i class="clip-users-2"></i>
+							<a href="<?=base_url('about_us')?>"><i class="clip-users-2"></i>
 								<span class="title">About Us</span>
 							</a>
 						</li>
