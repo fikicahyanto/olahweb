@@ -10,7 +10,7 @@ class About_model extends CI_Model
     function data_view(){
         $this->db->select('*');
         $this->db->from('t_about');
-        $query = $this->db->get()->result();
+        $query = $this->db->get()->row();
         return $query;
     }
 }

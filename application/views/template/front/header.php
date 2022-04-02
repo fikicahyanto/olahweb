@@ -21,18 +21,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<meta content="" name="author" />
 		<!-- end: META -->
 		<!-- start: MAIN CSS -->
-		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/fonts/style.css">
-		<link rel="stylesheet" href="assets/plugins/animate.css/animate.min.css">
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="stylesheet" href="assets/css/main-responsive.css">
-		<link rel="stylesheet" href="assets/css/theme_blue.css" type="text/css" id="skin_color">
+		<link href="<?=base_url("assets/plugins/bootstrap/css/bootstrap.min.css")?>" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/font-awesome/css/font-awesome.min.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/fonts/style.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/animate.css/animate.min.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/css/main.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/css/main-responsive.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/css/theme_blue.css")?>" type="text/css" id="skin_color">
 		<!-- end: MAIN CSS -->
 		<!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
-		<link rel="stylesheet" href="assets/plugins/revolution_slider/rs-plugin/css/settings.css">
-		<link rel="stylesheet" href="assets/plugins/flex-slider/flexslider.css">
-		<link rel="stylesheet" href="assets/plugins/colorbox/example2/colorbox.css">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/revolution_slider/rs-plugin/css/settings.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/flex-slider/flexslider.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/colorbox/example2/colorbox.css")?>">
+		<link rel="stylesheet" href="<?=base_url("assets/plugins/bootstrap-progressbar/css/bootstrap-progressbar-3.0.0.min.css")?>">
 		<!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
 		<!-- start: HTML5SHIV FOR IE8 -->
 		<!--[if lt IE 9]>

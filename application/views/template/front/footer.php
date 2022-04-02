@@ -128,21 +128,22 @@
 		<!--[if gte IE 9]><!-->
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<!--<![endif]-->
-		<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-		<script src="assets/plugins/jquery.transit/jquery.transit.js"></script>
-		<script src="assets/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
-		<script src="assets/plugins/jquery.appear/jquery.appear.js"></script>
-		<script src="assets/plugins/blockUI/jquery.blockUI.js"></script>
-		<script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
-		<script src="assets/js/main.js"></script>
+		<script src="<?=base_url("assets/plugins/bootstrap/js/bootstrap.min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/jquery.transit/jquery.transit.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/hover-dropdown/twitter-bootstrap-hover-dropdown.min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/jquery.appear/jquery.appear.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/blockUI/jquery.blockUI.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/jquery-cookie/jquery.cookie.js")?>"></script>
+		<script src="<?=base_url("assets/js/main.js")?>"></script>
 		<!-- end: MAIN JAVASCRIPTS -->
 		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<script src="assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-		<script src="assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-		<script src="assets/plugins/flex-slider/jquery.flexslider.js"></script>
-		<script src="assets/plugins/stellar.js/jquery.stellar.min.js"></script>
-		<script src="assets/plugins/colorbox/jquery.colorbox-min.js"></script>
-		<script src="assets/js/index.js"></script>
+		<script src="<?=base_url("assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/flex-slider/jquery.flexslider.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/stellar.js/jquery.stellar.min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/colorbox/jquery.colorbox-min.js")?>"></script>
+		<script src="<?=base_url("assets/plugins/bootstrap-progressbar/bootstrap-progressbar.min.js")?>"></script>
+		<script src="<?=base_url("assets/js/index.js")?>"></script>
 		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 		<script>
 			jQuery(document).ready(function() {

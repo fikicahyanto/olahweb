@@ -30,7 +30,7 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a href="pages_about.html">
+										<a href="<?=base_url('front/about_us')?>">
 											About Us
 										</a>
 									</li>
