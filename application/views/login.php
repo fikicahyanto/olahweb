@@ -84,8 +84,8 @@
 				<!-- </form> -->
 			</div>
 			<!-- end: LOGIN BOX -->
-            <?php $this->load->view("forgot");?>
-            <?php $this->load->view("daftar");?>			
+			<?php $this->load->view('forgot');?>
+			<?php $this->load->view('daftar');?>
 			<!-- start: COPYRIGHT -->
 			<div class="copyright">
 				2014 &copy; clip-one by cliptheme.
@@ -117,12 +117,12 @@
 		<script src="<?=base_url("assets/admin/plugins/jquery-validation/dist/jquery.validate.min.js")?>"></script>
 		<script src="<?=base_url("assets/admin/js/login.js")?>"></script>
 		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<!-- <script>
+		<script>
 			jQuery(document).ready(function() {
 				Main.init();
 				Login.init();
 			});
-		</script> -->
+		</script>
 		<script type="text/javascript">
 			$('#btn_submit').on('click', function(){
 			user = $('input[name="username"]').val();
