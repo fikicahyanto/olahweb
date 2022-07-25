@@ -40,7 +40,7 @@ class Login extends CI_Controller {
 				$data = ['status' => 'true', 'url' => base_url('dashboard'), 'text' => 'Login berhasil. silahkan tunggu, anda sedang dialihkan..'];
 			}
 			if($cek->role_id == 2 || $cek->role_id == 3 || $cek->role_id == 5){
-				$data = ['status' => 'true', 'url' => base_url('welcome'), 'text' => 'Login berhasil. mohon tunggu, anda sedang dialihkan..'];
+				$data = ['status' => 'true', 'url' => base_url('dashboard'), 'text' => 'Login berhasil. mohon tunggu, anda sedang dialihkan..'];
 				$this->session->set_flashdata('message', 'HI, WELCOME BACK');
 			}
 			echo json_encode($data);
