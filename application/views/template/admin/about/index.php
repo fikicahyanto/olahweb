@@ -176,7 +176,7 @@
 				xhr = null;
 
 				function edit(id) {
-					$('.main_modal').on('shown.bs.modal', function (e) {
+					$('.main_modal').on('show.bs.modal', function (e) {
 						if (xhr && xhr.readyState != 4) {
 							xhr.abort();
 						}

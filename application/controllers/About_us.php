@@ -27,7 +27,7 @@ class About_us extends CI_Controller {
     }
 
     function tambah(){
-        $data = ['about' => ci_get('t_about')->result()];
+        // $data = ['about' => ci_get('t_about')->result()];
         $view = $this->load->view('template/admin/about/tambah',TRUE);
         echo json_encode($view);
     }

@@ -4,34 +4,34 @@
 	<p>
 		Enter your personal details below:
 	</p>
-	<form class="form-register">
+	<form class="form-register" method="POST" action="<?php echo base_url('register/proses');?>">
 		<div class="errorHandler alert alert-danger no-display">
 			<i class="fa fa-remove-sign"></i> You have some form errors. Please check below.
 		</div>
 		<fieldset>
 			<div class="form-group">
-				<input type="text" class="form-control" name="full_name" placeholder="Full Name">
+				<input type="text" class="form-control" name="nama_lengkap" placeholder="Full Name">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="address" placeholder="Address">
+				<input type="text" class="form-control" name="username" placeholder="Full Name">
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" name="city" placeholder="City">
+				<input type="text" class="form-control" name="alamat" placeholder="Address">
 			</div>
 			<div class="form-group">
 				<div>
 					<label class="radio-inline">
-						<input type="radio" class="grey" value="F" name="gender">
-						Female
+						<input type="radio" class="grey" value="L" name="jenis_kelamin">
+						LAKI - LAKI
 					</label>
 					<label class="radio-inline">
-						<input type="radio" class="grey" value="M" name="gender">
-						Male
+						<input type="radio" class="grey" value="P" name="jenis_kelamin">
+						PEREMPUAN
 					</label>
 				</div>
 			</div>
 			<p>
-				Enter your account details below:
+				Isikan detail akun :
 			</p>
 			<div class="form-group">
 				<span class="input-icon">
@@ -47,14 +47,6 @@
 				<span class="input-icon">
 					<input type="password" class="form-control" name="password_again" placeholder="Password Again">
 					<i class="fa fa-lock"></i> </span>
-			</div>
-			<div class="form-group">
-				<div>
-					<label for="agree" class="checkbox-inline">
-						<input type="checkbox" class="grey agree" id="agree" name="agree">
-						I agree to the Terms of Service and Privacy Policy
-					</label>
-				</div>
 			</div>
 			<div class="form-actions">
 				<a class="btn btn-light-grey go-back">

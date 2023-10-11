@@ -7,47 +7,51 @@
 						<div class="newsletter">
 							<h4>Newsletter</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+								Silahkan Masukan email Anda untuk mendapatkan info dan promo terbaru.
 							</p>
 							<form method="POST" action="#" id="newsletterForm">
 								<div class="input-group">
 									<input type="text" id="email" name="email" placeholder="Email Address" class="form-control">
 									<span class="input-group-btn">
 										<button type="submit" class="btn btn-default">
-											Go!
+											Subcribe !
 										</button> </span>
 								</div>
 							</form>
 						</div>
 					</div>
 					<div class="col-md-3">
-						<h4>Latest Tweet</h4>
+						<h4>Layanan Kami</h4>
 						<div class="twitter" id="tweet">
-							<i class="fa fa-twitter"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-							<a href="#" class="time">
-								12 Dec
-							</a>
+							<p>Website Landing Page</p>
+							<p>Website Company Profile</p>
+							<p>Website Undangan Wedding Online</p>
+							<p>Website Toko Online</p>
+							<p>Aplikasi Web</p>
+							<p>Desain</p>
+							<p>SEO</p>
+							<p>Digital Marketing</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="contact-details">
-							<h4>Contact Us</h4>
+							<h4>Kontak Kami</h4>
 							<ul class="contact">
 								<li>
 									<p>
-										<i class="fa fa-map-marker"></i><strong>Address:</strong> 1234 Street Name, City Name, United States
+										<i class="fa fa-map-marker"></i><strong>Alamat:</strong> Brebes, Jawa Tengah, indonesia
 									</p>
 								</li>
 								<li>
 									<p>
-										<i class="fa fa-phone"></i><strong>Phone:</strong> (123) 456-7890
+										<i class="fa fa-phone"></i><strong>Phone / WA:</strong> 082399349304
 									</p>
 								</li>
 								<li>
 									<p>
 										<i class="fa fa-envelope"></i><strong>Email:</strong>
-										<a href="mailto:mail@example.com">
-											mail@example.com
+										<a href="mailto:olahwebs@gmail.com">
+											Olahwebs@gmail.com
 										</a>
 									</p>
 								</li>
@@ -55,7 +59,7 @@
 						</div>
 					</div>
 					<div class="col-md-2">
-						<h4>Follow Us</h4>
+						<h4>Ikuti Media Sosial Kami</h4>
 						<div class="social-icons">
 							<ul>
 								<li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
@@ -63,8 +67,13 @@
 										Twitter
 									</a>
 								</li>
+								<li class="fa fa-instagram" data-original-title="Instagram" data-placement="bottom">
+									<a target="_blank" href="https://instagram.com/olah.web">
+										Instagram
+									</a>
+								</li>
 								<li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
-									<a target="_blank" href="http://facebook.com" data-original-title="Facebook">
+									<a target="_blank" href="https://www.facebook.com/profile.php?id=100088368243332&mibextid=ZbWKwL" data-original-title="Facebook">
 										Facebook
 									</a>
 								</li>
@@ -83,12 +92,12 @@
 					<div class="row">
 						<div class="col-md-1">
 							<a class="logo" href="index.html">
-								CLIP<i class="clip-clip"></i>ONE
+								Olahweb.com
 							</a>
 						</div>
 						<div class="col-md-7">
 							<p>
-								&copy; Copyright 2014 by Clip-One. All Rights Reserved.
+								&copy; Copyright 2022 by Olahweb.com. All Rights Reserved.
 							</p>
 						</div>
 						<div class="col-md-4">
@@ -126,7 +135,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<![endif]-->
 		<!--[if gte IE 9]><!-->
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
 		<!--<![endif]-->
 		<script src="<?=base_url("assets/plugins/bootstrap/js/bootstrap.min.js")?>"></script>
 		<script src="<?=base_url("assets/plugins/jquery.transit/jquery.transit.js")?>"></script>
